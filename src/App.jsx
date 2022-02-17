@@ -11,6 +11,10 @@ import Trading from "./Trading";
 import Navbar from "./Navbar";
 import Profile from "./Profile";
 import Home from "./Home";
+import Withdraw from "./Withdraw";
+
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [state, setState] = React.useState({ adminId: undefined });
@@ -61,6 +65,16 @@ function App() {
             }
           />
           <Route
+            path="/Withdraw"
+            element={
+              !localStorage.getItem("adminId") && !state.adminId ? (
+                <Navigate to="/Login" />
+              ) : (
+                <Withdraw />
+              )
+            }
+          />
+          <Route
             path="/Login"
             element={
               !localStorage.getItem("adminId") && !state.adminId ? (
@@ -72,6 +86,7 @@ function App() {
           />
         </Routes>
       </Router>
+      <ToastContainer />
     </div>
   );
 }
