@@ -92,7 +92,12 @@ function Users() {
         <div className="col-4 px-1">
           <div
             className="py-3 card margin-top container bg-dark trading-card text-white"
-            style={{ width: "28rem" }}
+            style={{
+              width: "28rem",
+              height: "39rem",
+              overflow: "auto",
+              overflowX: "hidden",
+            }}
           >
             <div className="card-body">
               <div className="h1 text-center">All requests</div>
