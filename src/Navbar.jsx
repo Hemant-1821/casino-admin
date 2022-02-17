@@ -26,6 +26,12 @@ const navbar = (props) => {
             <a className="nav-link text-white" href="/profile">
               Profile
             </a>
+            <a className="nav-link text-white" href="/withdraw">
+              Withdraw
+            </a>
+            <a className="nav-link text-white" href="/Users">
+              Users
+            </a>
             <div
               role="menuitem"
               tabIndex={0}

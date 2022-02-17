@@ -12,6 +12,7 @@ import Navbar from "./Navbar";
 import Profile from "./Profile";
 import Home from "./Home";
 import Withdraw from "./Withdraw";
+import Users from "./Users";
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -71,6 +72,16 @@ function App() {
                 <Navigate to="/Login" />
               ) : (
                 <Withdraw />
+              )
+            }
+          />
+          <Route
+            path="/Users"
+            element={
+              !localStorage.getItem("adminId") && !state.adminId ? (
+                <Navigate to="/Login" />
+              ) : (
+                <Users />
               )
             }
           />
